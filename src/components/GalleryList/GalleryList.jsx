@@ -1,25 +1,24 @@
-// import axios from 'axios';
-// import { useState, useEffect } from 'react';
-// import GalleryItem from '../GalleryItem/GalleryItem'
-// import './GalleryList.css'
+import axios from 'axios';
+import { useState, useEffect } from 'react';
+import GalleryItem from '../GalleryItem/GalleryItem'
+import './GalleryList.css'
 
 
-// function RenderGallery({galleryItems}) {
+function GalleryList({item}) {
+ console.log(item)
+    return (
+        <> 
+        <ul> 
+        {item.map(item => ( 
+            <li key={item.id}>
+            <GalleryItem item ={item}/> 
+            </li>))}
+        </ul>
+        </>
+    )
+}
 
-//     return (
-//         <> 
-//         <ul> 
-//         {this.galleryItems.map ( galleryItems => 
-//             <li key={galleryItems.id}> 
-//             <GalleryItem galleryItems={galleryItems} />
-//             </li>
-//         )}
-//         </ul>
-//         </>
-//     )
-// }
+// {item.path}{item.description}{item.likes}
 
 
-
-
-// export default GalleryList;
+export default GalleryList;

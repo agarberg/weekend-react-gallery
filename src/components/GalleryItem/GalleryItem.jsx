@@ -1,18 +1,21 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-
 import './GalleryItem.css'
 
-function GalleryItem ({galleryItems}) {
+
+function GalleryItem({item}) {
+console.log(item)
     return (
         <>
+
+
     <div>
-        <img src={galleryItems.path}/>
-        <p></p>
+        <img src={item.path} />
+        <p>{item.description}</p>
     </div>
     <div>
-        <p>{galleryItems.likes}</p>
-        <button>Like This</button>
+        <p>{item.likes} Likes</p>
+        <button>Like Me!</button>
     </div>
     </>
     )
