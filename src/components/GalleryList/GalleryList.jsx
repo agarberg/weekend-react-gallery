@@ -18,7 +18,7 @@ function GalleryList({item}) {
     )
 }
 
-// {item.path}{item.description}{item.likes}
+
 
 
 export default GalleryList;

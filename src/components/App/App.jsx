@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import './App.css';
-// import GalleryItem from '../GalleryItem/GalleryItem';
+import GalleryItem from '../GalleryItem/GalleryItem';
 import GalleryList from '../GalleryList/GalleryList';
 
 function App() { 
@@ -10,6 +10,7 @@ function App() {
 
   useEffect(() => {
     getGallery()}, []);
+
 
   const getGallery = () => {
   console.log("in GET gallery function")
@@ -33,7 +34,8 @@ console.log(galleryItems);
           Gallery Goes Here
         </p>
         <GalleryList item={galleryItems}/>
-        
+        <GalleryItem getGallery={getGallery}/>
+
       </div>
     );
 }
