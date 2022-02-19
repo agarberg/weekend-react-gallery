@@ -1,5 +1,27 @@
-import React from 'react';
+import axios from 'axios';
+import { useState, useEffect } from 'react';
 import './App.css';
+import GalleryItem from '../GalleryItem/GalleryItem';
+import GalleryList from '../GalleryList/GalleryList';
+
+const [galleryItems, setGalleryItems] = useState([]);
+
+useEffect(() => {
+  getGallery()}, []);
+
+
+  const getGallery = () => {
+  console.log("in GET gallery function")
+  axios.get('/gallery')
+    .then(response => {
+      console.log("GET Success!", response.data)
+      setGalleryItems(response.data)
+    })
+    .catch(err => {
+      alert("error getting gallery ;(")
+    })
+}
+
 
 function App() {
     return (
@@ -7,8 +29,12 @@ function App() {
         <header className="App-header">
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
-        <p>Gallery goes here</p>
-        <img src="images/goat_small.jpg"/>
+        <p>
+          {/* <GalleryList galleryList={galleryItems}/> */}
+        </p>
+          <GalleryItem galleryItems={galleryItems}
+          />
+        
       </div>
     );
 }
