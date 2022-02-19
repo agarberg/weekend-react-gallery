@@ -7,8 +7,8 @@ function GalleryItem ({galleryItems}) {
     return (
         <>
     <div>
-        <img src={galleryItems.path} alt={galleryItems.path} />
-        <p>{galleryItems.description}</p>
+        <img src={galleryItems.path}/>
+        <p></p>
     </div>
     <div>
         <p>{galleryItems.likes}</p>

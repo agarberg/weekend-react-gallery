@@ -2,13 +2,14 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import './App.css';
 import GalleryItem from '../GalleryItem/GalleryItem';
-import GalleryList from '../GalleryList/GalleryList';
+// import GalleryList from '../GalleryList/GalleryList';
 
-const [galleryItems, setGalleryItems] = useState([]);
+function App() { 
 
-useEffect(() => {
-  getGallery()}, []);
+  const [galleryItems, setGalleryItems] = useState([]);
 
+  useEffect(() => {
+    getGallery()}, []);
 
   const getGallery = () => {
   console.log("in GET gallery function")
@@ -21,9 +22,7 @@ useEffect(() => {
       alert("error getting gallery ;(")
     })
 }
-
-
-function App() {
+console.log(galleryItems);
     return (
       <div className="App">
         <header className="App-header">
