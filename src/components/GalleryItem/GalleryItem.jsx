@@ -1,22 +1,8 @@
-import axios from 'axios';
 import { useState } from 'react';
-import App from '../App/App';
 import './GalleryItem.css'
+import GalleryList from '../GalleryList/GalleryList';
 
-
-function GalleryItem({item}) {
-
-    const likeImage = () => {
-        console.log('like button clicked')
-        axios.put('/gallery/like/:id')
-            .then(response => {
-                // getGallery();
-                console.log('Your like was counted!');
-            })
-            .catch(err => {
-                alert('Your like did not count')
-              })
-          }
+function GalleryItem({item, likeImage}) {
 
     const [image, setDescription] = useState(true);
     const toggler = () => {
@@ -32,7 +18,7 @@ function GalleryItem({item}) {
     </div>
     <div className="Likes">
         <p>{item.likes} Likes</p>
-        <button onClick={likeImage}>Like Me!</button>
+        <button onClick={() => likeImage(item.id)}>Like Me!</button>
     </div>
     </div>
     </>

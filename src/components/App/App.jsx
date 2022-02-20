@@ -23,6 +23,20 @@ function App() {
       alert("error getting gallery ;(")
     })
 }
+
+const likeImage = (id) => {
+  console.log('like button clicked')
+  axios.put(`/gallery/like/${id}`)
+      .then(response => {
+          getGallery();
+          console.log('Your like was counted!');
+      })
+      .catch(err => {
+          alert('Your like did not count :(')
+        })
+    }
+
+
 console.log(galleryItems);
     return (
       
@@ -33,8 +47,10 @@ console.log(galleryItems);
         <p>
           Gallery Goes Here
         </p>
-        <GalleryList item={galleryItems}/>
-        <GalleryItem getGallery={getGallery}/>
+        <GalleryList item={galleryItems}
+         likeImage={likeImage}/>
+
+       
 
       </div>
     );
