@@ -11,17 +11,17 @@ function GalleryItem({item, likeImage}) {
     }
 
     return (
-        <>
+    <>
     <div className="GalleryItem">
-    <div className="PicDesc" onClick={toggler}>
+        <div className="PicDesc" onClick={toggler}>
         {/* ternary conditional to flip between p / img */}
         {image? <img src={item.path}/>:<p>{item.description}</p>}
-    </div>
-    {/* display likes and like button on DOM */}
-    <div className="Likes">
+        </div>
+        {/* display likes and like button on DOM */}
+        <div className="Likes">
         <button onClick={() => likeImage(item.id)}>Like Me!</button>
         <p>{item.likes} Likes</p>
-    </div>
+        </div>
     </div>
     </>
     )

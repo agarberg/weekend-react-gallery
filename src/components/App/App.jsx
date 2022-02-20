@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import './App.css';
-import GalleryItem from '../GalleryItem/GalleryItem';
 import GalleryList from '../GalleryList/GalleryList';
 
 function App() { 
@@ -22,7 +21,7 @@ function App() {
     .catch(err => {
       alert("error getting gallery ;(")
     })
-}
+  }
 // function to update like count
 const likeImage = (id) => {
   console.log('like button clicked')
@@ -39,18 +38,18 @@ const likeImage = (id) => {
 
 
 console.log(galleryItems);
-    return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Gallery of My Dogs</h1>
-        </header>
-        <div className="gallery">
-          {/* send gallery to GalleryList component through props */}
-        <GalleryList item={galleryItems}
-        // pass likeimage function call to GalleryList component
-         likeImage={likeImage}/>
-         </div>
-      </div>
+return (
+  <div className="App">
+    <header className="App-header">
+    <h1 className="App-title">Gallery of My Dogs</h1>
+    </header>
+    <div className="gallery">
+      {/* send gallery to GalleryList component through props */}
+      <GalleryList item={galleryItems}
+      // pass likeimage function call to GalleryList component
+      likeImage={likeImage}/>
+    </div>
+  </div>
     );
 }
 
