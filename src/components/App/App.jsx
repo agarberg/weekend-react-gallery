@@ -36,7 +36,6 @@ const likeImage = (id) => {
         })
     }
 
-
 console.log(galleryItems);
 return (
   <div className="App">
