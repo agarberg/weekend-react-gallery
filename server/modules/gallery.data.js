@@ -1,6 +1,6 @@
 const galleryItems = [
     { id: 1, path: 'images/IMG_0212.jpg', description: 'Teddy', likes: 0 },
-    { id: 2, path: 'images/IMG_0213.jpg', description: 'Milly', likes: 0 },
+    { id: 2, path: 'images/IMG_0213.jpg', description: 'Puppy Milly', likes: 0 },
     { id: 3, path: 'images/IMG_0215.jpg', description: 'Baby Teddy', likes: 0 },
     { id: 4, path: 'images/IMG_0238.jpg', description: 'Old Man Teddy', likes: 0 },
     { id: 5, path: 'images/IMG_6467.jpg', description: 'On a Walk!', likes: 0 },
