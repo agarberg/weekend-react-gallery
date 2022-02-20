@@ -6,16 +6,15 @@ import './GalleryList.css'
 function GalleryList({item, likeImage}) {
  console.log(item)
     return (
-        <> 
-        <ul> 
+        <>
         {item.map(item => ( 
-            <li key={item.id}>
+            <div key={item.id}>
             <GalleryItem item={item}
-            likeImage={likeImage}
-            /> 
-            </li>))}
-        </ul>
+            likeImage={likeImage}/> 
+            </div>
+            ))}
         </>
+        
     )
 }
 

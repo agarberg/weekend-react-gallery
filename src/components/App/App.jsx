@@ -42,16 +42,12 @@ console.log(galleryItems);
       
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Gallery of My Life</h1>
+          <h1 className="App-title">Gallery of My Dogs</h1>
         </header>
-        <p>
-          Gallery Goes Here
-        </p>
+        <div className="gallery">
         <GalleryList item={galleryItems}
          likeImage={likeImage}/>
-
-       
-
+         </div>
       </div>
     );
 }
