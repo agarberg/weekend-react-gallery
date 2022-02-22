@@ -12,20 +12,20 @@ function App() {
 
 // pull gallery from backend and store in array
   const getGallery = () => {
-  console.log("in GET gallery function")
-  axios.get('/gallery')
-    .then(response => {
-      console.log("GET Success!", response.data)
-      setGalleryItems(response.data)
-    })
-    .catch(err => {
-      alert("error getting gallery ;(")
-    })
+    console.log("in GET gallery function")
+    axios.get('/gallery')
+      .then(response => {
+        console.log("GET Success!", response.data)
+        setGalleryItems(response.data)
+     })
+      .catch(err => {
+        alert("error getting gallery ;(")
+     })
   }
 // function to update like count
-const likeImage = (id) => {
-  console.log('like button clicked')
-  axios.put(`/gallery/like/${id}`)
+  const likeImage = (id) => {
+    console.log('like button clicked')
+    axios.put(`/gallery/like/${id}`)
       .then(response => {
         // call getGallery to refresh like count
           getGallery();

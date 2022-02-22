@@ -20,7 +20,7 @@ function GalleryItem({item, likeImage}) {
         {/* display likes and like button on DOM */}
         <div className="Likes">
         <button onClick={() => likeImage(item.id)}>Like Me!</button>
-        <p>{item.likes} Likes</p>
+        <h4>{item.likes} Likes</h4>
         </div>
     </div>
     </>

@@ -9,7 +9,7 @@ function GalleryList({item, likeImage}) {
     return (
         <>
         {item.map(item => ( 
-            <div key={item.id}>
+            <div key={item.id}> 
             <GalleryItem item={item}
             likeImage={likeImage}/> 
             </div>
